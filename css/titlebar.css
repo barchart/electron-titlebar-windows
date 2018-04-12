@@ -1,33 +1,55 @@
-.titlebar
+/* .titlebar-windows
 {
     display: block;
     position: relative;
     height: 32px;
     padding: 0;
 }
+ */
 
-.titlebar.draggable
+.titlebar-windows-title {
+    color: white;
+    font-size: 12px;
+}
+
+.titlebar-windows-draghandle {
+    position: absolute;
+    /* background: green; */
+    top: 4px;
+    right: 0;
+    bottom: 0px;
+    left: 32px;
+    -webkit-app-region: drag;
+}
+
+.titlebar-windows {
+    height: 32px;
+    display: flex;
+    padding: 0;
+}
+
+.titlebar-windows.draggable
 {
     -webkit-app-region: drag;
 }
 
-.titlebar-controls
+.titlebar-windows-controls
 {
     float: right;
     text-align: left;
 }
 
-.titlebar:after,
-.titlebar-controls:after
+.titlebar-windows:after,
+.titlebar-windows-controls:after
 {
     content: ' ';
     display: table;
     clear: both;
 }
 
-.titlebar-minimize,
-.titlebar-resize,
-.titlebar-close
+.titlebar-windows-minimize,
+.titlebar-windows-resize,
+.titlebar-windows-close
 {
     float: left;
     width: 45px;
@@ -43,24 +65,24 @@
     transition: background-color .2s;
 }
 
-.titlebar.draggable .titlebar-minimize,
-.titlebar.draggable .titlebar-resize,
-.titlebar.draggable .titlebar-close
+.titlebar-windows.draggable .titlebar-windows-minimize,
+.titlebar-windows.draggable .titlebar-windows-resize,
+.titlebar-windows.draggable .titlebar-windows-close
 {
     -webkit-app-region: no-drag;
 }
 
-.titlebar-minimize svg,
-.titlebar-resize svg.maximize-svg,
-.titlebar-resize svg.fullscreen-svg,
-.titlebar-close svg
+.titlebar-windows-minimize svg,
+.titlebar-windows-resize svg.maximize-svg,
+.titlebar-windows-resize svg.fullscreen-svg,
+.titlebar-windows-close svg
 {
     width: 10px;
     height: 10px;
     shape-rendering: crispEdges;
 }
 
-.titlebar-close svg polygon
+.titlebar-windows-close svg polygon
 {
     -webkit-transition: fill .2s;
     -moz-transition: fill .2s;
@@ -69,53 +91,53 @@
     transition: fill .2s;
 }
 
-.titlebar:not(.fullscreen) svg.maximize-svg
+.titlebar-windows:not(.fullscreen) svg.maximize-svg
 {
     display: none;
 }
 
-.titlebar.fullscreen svg.fullscreen-svg
+.titlebar-windows.fullscreen svg.fullscreen-svg
 {
     display: none;
 }
 
-.titlebar-minimize:hover,
-.titlebar-resize:hover,
-.titlebar-fullscreen:hover
+.titlebar-windows-minimize:hover,
+.titlebar-windows-resize:hover,
+.titlebar-windows-fullscreen:hover
 {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #E5E5E5;
 }
 
-.titlebar-light .titlebar-minimize:hover,
-.titlebar-light .titlebar-resize:hover,
-.titlebar-light .titlebar-fullscreen:hover
+.titlebar-windows-light .titlebar-windows-minimize:hover,
+.titlebar-windows-light .titlebar-windows-resize:hover,
+.titlebar-windows-light .titlebar-windows-fullscreen:hover
 {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.titlebar-close:hover
+.titlebar-windows-close:hover
 {
     background-color: rgba(232, 17, 35, 0.9);
 }
 
-.titlebar-close:hover svg polygon
+.titlebar-windows-close:hover svg polygon
 {
     fill: rgba(255, 255, 255, 1);
 }
 
-.titlebar-light .titlebar-close:hover
+.titlebar-windows-light .titlebar-windows-close:hover
 {
     fill: rgba(0, 0, 0, 1);
 }
 
-.titlebar-light svg polygon,
-.titlebar-light svg rect,
-.titlebar-light svg > path
+.titlebar-windows-light svg polygon,
+.titlebar-windows-light svg rect,
+.titlebar-windows-light svg > path
 {
     fill: rgba(255, 255, 255, 1);
 }
 
-.titlebar-light .titlebar-close:hover
+.titlebar-windows-light .titlebar-windows-close:hover
 {
     background-color: rgba(232, 17, 35, 0.9);
 }
