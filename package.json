@@ -1,5 +1,5 @@
 {
-  "name": "electron-titlebar-windows",
+  "name": "@barchart/electron-titlebar-windows",
   "version": "3.0.0",
   "description": "Add Windows 10-style Modern UI titlebars to Electron-based desktop applications",
   "license": "MIT",
